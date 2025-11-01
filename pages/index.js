@@ -22,7 +22,7 @@ function Home() {
   const [mounted, setMounted] = useState(false); //Prevent hydration mismatch
 
   const token = process.env.NEXT_PUBLIC_FINNHUB_TOKEN || "d42c7g1r01qorleqm4p0d42c7g1r01qorleqm4pg";
-  const { subscribe, unsubscribe } = useFinnhub(token);
+  const { subscribe, unsubscribe } = useFinnhub("d42c7g1r01qorleqm4p0d42c7g1r01qorleqm4pg");
 
   // Fetch top coins (SSR data already preloaded, but refresh client-side if needed)
   useEffect(() => {
